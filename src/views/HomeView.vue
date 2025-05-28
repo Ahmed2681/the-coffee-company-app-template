@@ -1,16 +1,17 @@
 <script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true,
-  },
-})
+import LoadingAnimation from '@/components/LoadingAnimation.vue'
+
+import { useGlobalStore } from '@/stores'
+const globalStore = useGlobalStore()
+
+import { storeToRefs } from 'pinia'
+const { isLoading } = storeToRefs(globalStore)
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="text-2xl">{{ msg }}</h1>
-    <h3 class="text-red-500 text-6xl">
+  <LoadingAnimation v-if="isLoading" />
+  <div class="h-[100vh] w-[100vw]">
+    <h3>
       You’ve successfully created a project with
       <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
