@@ -1,0 +1,6 @@
+@import './base.css';
+@import 'tailwindcss';
+
+* {
+  @apply transition-all duration-200;
+}
