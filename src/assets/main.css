@@ -1,5 +1,8 @@
-@import './base.css';
+@import './styles/base.css';
+@import './styles/fonts.css';
 @import 'tailwindcss';
+
+
 
 * {
   @apply transition-all duration-200;

@@ -3,7 +3,7 @@
 <template>
   <div class="absolute size-full bg-[#271300] flex justify-center items-center p-5">
     <video autoplay muted loop class="rounded-lg animate-bounce">
-      <source src="@/assets/coffee-loading.mp4" type="video/mp4" />
+      <source src="@/assets/videos/coffee-loading.mp4" type="video/mp4" />
     </video>
   </div>
 </template>

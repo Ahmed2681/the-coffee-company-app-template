@@ -1,7 +1,13 @@
 <script setup></script>
 
+<!-- [#634832] -->
+<!-- [#967259] -->
 <template>
-  <div class="min-h-screen min-w-screen flex items-center text-2xl justify-center">
-    WELCOME TO CAFFEINE WORLD
+  <div class="h-screen min-w-screen bg-[#967259] text-2xl">
+    <aside class="w-1/6 bg-gray-200 h-full text-black font-dancing">
+      Coffee
+
+      <div class="bg-brown size-32"></div>
+    </aside>
   </div>
 </template>
