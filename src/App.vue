@@ -9,7 +9,7 @@ const globalStore = useGlobalStore()
 import { storeToRefs } from 'pinia'
 const { isLoading } = storeToRefs(globalStore)
 
-onMounted(async () => {
+onMounted(() => {
   isLoading.value = true
 
   setTimeout(() => {
@@ -20,7 +20,7 @@ onMounted(async () => {
 
 <template>
   <aside
-    class="absolute z-10 bg-[url('@/assets/images/old-paper.jpg')] h-screen w-screen opacity-25 bg-cover"
+    class="fixed inset-0 z-50 bg-[url('@/assets/images/old-paper.jpg')] opacity-25 bg-cover pointer-events-none"
   ></aside>
   <LoadingAnimation v-if="isLoading" />
   <RouterView />
