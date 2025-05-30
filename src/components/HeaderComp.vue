@@ -20,14 +20,14 @@ onUnmounted(() => {
 
 <template>
   <aside
-    class="w-1/6 bg-gray-200 z-10 h-full p-20 rounded-2xl justify-center flex"
+    class="z-10 flex h-full w-1/6 justify-center rounded-2xl bg-gray-200 p-20"
     :style="{ opacity: `${scrollPercent > 85 ? 0 : 100}%` }"
   >
-    <h1 class="text-black text-6xl font-dancing">Coffee</h1>
+    <h1 class="font-dancing text-6xl text-black">Coffee</h1>
   </aside>
 
   <aside
-    class="fixed top-0 left-0 w-full h-20 bg-gray-200 rounded-2xl shadow transition-transform ease-in-out"
+    class="fixed top-0 left-0 flex h-fit w-full items-center justify-center rounded-2xl border-b bg-[url('@/assets/shapes/steam.svg')] bg-cover shadow transition-transform ease-in-out"
     :style="{
       transform: `translateX(${-100 + scrollPercent}%)`,
       opacity: `${scrollPercent}%`,
