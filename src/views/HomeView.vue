@@ -7,7 +7,7 @@
     <aside class="w-1/6 bg-gray-200 h-full text-black font-dancing">
       Coffee
 
-      <div class="bg-brown size-32"></div>
+      <div class="text-brown text-dancing size-32">kjadsvfb</div>
     </aside>
   </div>
 </template>

@@ -1,8 +1,17 @@
 @import './styles/base.css';
-@import './styles/fonts.css';
+/* @import './styles/fonts.css'; */
 @import 'tailwindcss';
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
+/* Add Custom Color */
+/* @theme {
+  --color-yourCustomColorName: #...;
+} */
+
+@theme {
+  --font-dancing: 'Dancing Script', sans-serif;
+}
 
 * {
   @apply transition-all duration-200;
