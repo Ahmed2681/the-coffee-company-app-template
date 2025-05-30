@@ -27,7 +27,7 @@ onUnmounted(() => {
   </aside>
 
   <aside
-    class="fixed top-0 left-0 flex h-fit w-full items-center justify-center rounded-2xl border-b bg-[url('@/assets/shapes/steam.svg')] bg-cover shadow transition-transform ease-in-out"
+    class="fixed top-0 left-0 flex h-fit w-full items-center justify-center rounded-2xl shadow transition-transform ease-in-out"
     :style="{
       transform: `translateX(${-100 + scrollPercent}%)`,
       opacity: `${scrollPercent}%`,
