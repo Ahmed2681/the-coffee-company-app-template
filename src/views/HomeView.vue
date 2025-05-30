@@ -3,11 +3,9 @@
 <!-- [#634832] -->
 <!-- [#967259] -->
 <template>
-  <div class="h-screen min-w-screen bg-[#967259] text-2xl">
-    <aside class="w-1/6 bg-gray-200 h-full text-black font-dancing">
-      Coffee
-
-      <div class="text-brown text-dancing size-32">kjadsvfb</div>
+  <div class="h-screen min-w-screen bg-[#967259]">
+    <aside class="w-1/6 bg-gray-200 h-full p-20 justify-center flex">
+      <h1 class="text-black text-6xl font-dancing">Coffee</h1>
     </aside>
   </div>
 </template>
