@@ -14,7 +14,7 @@ onMounted(() => {
 
   setTimeout(() => {
     isLoading.value = false
-  }, 15)
+  }, 6000)
 })
 </script>
 
