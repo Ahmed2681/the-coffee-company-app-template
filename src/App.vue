@@ -14,14 +14,17 @@ onMounted(() => {
 
   setTimeout(() => {
     isLoading.value = false
-  }, 6000)
+  }, 1000)
 })
 </script>
 
 <template>
   <aside
-    class="fixed inset-0 z-50 bg-[url('@/assets/images/old-paper.jpg')] opacity-25 bg-cover pointer-events-none"
+    class="pointer-events-none fixed inset-0 z-50 bg-[url('@/assets/images/old-paper.jpg')] bg-cover opacity-25"
   ></aside>
   <LoadingAnimation v-if="isLoading" />
-  <RouterView />
+
+  <component :is="$route.meta.layout || 'div'">
+    <RouterView />
+  </component>
 </template>
