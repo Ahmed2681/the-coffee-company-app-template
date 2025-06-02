@@ -17,7 +17,6 @@ const updateScroll = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', updateScroll, { passive: true })
-  updateScroll()
 })
 
 onUnmounted(() => {
