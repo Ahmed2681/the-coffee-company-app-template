@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 
 export const useGlobalStore = defineStore('globalStore', () => {
   const isLoading = ref(null)
-  const isDrawerOpen = ref(false)
+  const isDrawerOpen = ref(true)
 
   const onCheckDrawer = () => {
     isDrawerOpen.value = !isDrawerOpen.value

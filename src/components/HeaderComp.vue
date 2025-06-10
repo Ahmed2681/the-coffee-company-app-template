@@ -38,7 +38,11 @@ onUnmounted(() => {
   </aside>
 
   <aside
-    class="fixed top-0 left-0 flex h-20 w-full items-center justify-between bg-gray-200 px-[5%] shadow transition-transform ease-in-out"
+    class="fixed top-0 left-0 flex h-20 items-center justify-between bg-gray-200 px-[5%] shadow transition-transform ease-in-out"
+    :class="{
+      'w-5/6': isDrawerOpen && scrollPercent >= 90,
+      'w-full': !isDrawerOpen || scrollPercent < 90,
+    }"
     :style="{
       transform: `translateY(${-100 + scrollPercent}%)`,
       opacity: `${scrollPercent}%`,
