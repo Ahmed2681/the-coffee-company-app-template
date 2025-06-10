@@ -1,27 +1,13 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-import { useGlobalStore } from '@/stores'
+import { useGlobalStore, useScrollStore } from '@/stores'
 const globalStore = useGlobalStore()
+const scrollStore = useScrollStore()
 
 import { storeToRefs } from 'pinia'
 const { isDrawerOpen } = storeToRefs(globalStore)
+const { scrollPercent } = storeToRefs(scrollStore)
+
 const { onCheckDrawer } = globalStore
-
-const scrollPercent = ref(0)
-
-const updateScroll = () => {
-  const raw = Math.min(window.scrollY / 300, 1)
-  scrollPercent.value = parseInt(raw * 100)
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', updateScroll, { passive: true })
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', updateScroll)
-})
 </script>
 
 <template>

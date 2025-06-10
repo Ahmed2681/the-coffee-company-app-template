@@ -9,6 +9,9 @@ const globalStore = useGlobalStore()
 import { storeToRefs } from 'pinia'
 const { isLoading } = storeToRefs(globalStore)
 
+import useScrollListener from '@/composables/useScrollListener.js'
+useScrollListener()
+
 onMounted(() => {
   isLoading.value = true
 

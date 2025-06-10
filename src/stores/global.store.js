@@ -7,7 +7,6 @@ export const useGlobalStore = defineStore('globalStore', () => {
 
   const onCheckDrawer = () => {
     isDrawerOpen.value = !isDrawerOpen.value
-    console.log('now open')
   }
 
   return { isLoading, isDrawerOpen, onCheckDrawer }
