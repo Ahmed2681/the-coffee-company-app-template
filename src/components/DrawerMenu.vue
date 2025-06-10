@@ -16,6 +16,8 @@ const { scrollPercent } = storeToRefs(scrollStore)
       opacity: `${scrollPercent > 90 && isDrawerOpen ? 100 : 0}%`,
     }"
   >
+
+  <!-- Profil bilgileri / Oturum Aç (App'e yönlendirilecek) / Ayarlar vb.-->
     <button class="cursor-pointer self-start" @click="$router.push('/')">
       <h1 class="font-dancing text-6xl">Coffee</h1>
     </button>
