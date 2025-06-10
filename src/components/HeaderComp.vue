@@ -32,7 +32,9 @@ onUnmounted(() => {
       opacity: `${scrollPercent > 85 ? 0 : 100}%`,
     }"
   >
-    <h1 class="font-dancing text-6xl">Coffee</h1>
+    <button class="cursor-pointer self-start" @click="$router.push('/')">
+      <h1 class="font-dancing text-6xl">Coffee</h1>
+    </button>
   </aside>
 
   <aside
@@ -42,7 +44,9 @@ onUnmounted(() => {
       opacity: `${scrollPercent}%`,
     }"
   >
-    <h1 class="font-dancing text-4xl">Coffee</h1>
+    <button class="cursor-pointer" @click="$router.push('/')">
+      <h1 class="font-dancing text-4xl">Coffee</h1>
+    </button>
 
     <ul class="flex items-center gap-10">
       <li>Home</li>
