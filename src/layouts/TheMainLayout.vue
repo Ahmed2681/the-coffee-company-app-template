@@ -31,7 +31,7 @@ onMounted(() => {
 <template>
   <HeaderComp />
   <DrawerMenu />
-  <div ref="slotContainer">
+  <div ref="slotContainer" class="bg-[#967259] min-h-screen">
     <slot />
   </div>
   <FooterComp />

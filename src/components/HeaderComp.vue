@@ -42,7 +42,7 @@ const { onCheckDrawer } = globalStore
 
     <ul class="flex items-center gap-10">
       <li>Home</li>
-      <li>About Us</li>
+      <li><button class="cursor-pointer" @click="$router.push('/about')">About Us</button></li>
       <li>Contact</li>
     </ul>
 
