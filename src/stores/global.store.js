@@ -3,11 +3,12 @@ import { defineStore } from 'pinia'
 
 export const useGlobalStore = defineStore('globalStore', () => {
   const isLoading = ref(null)
-  const isDrawerOpen = ref(true)
+  const isDrawerOpen = ref(false)
+  const isFooterVisible = ref(false)
 
   const onCheckDrawer = () => {
     isDrawerOpen.value = !isDrawerOpen.value
   }
 
-  return { isLoading, isDrawerOpen, onCheckDrawer }
+  return { isLoading, isDrawerOpen, isFooterVisible, onCheckDrawer }
 })

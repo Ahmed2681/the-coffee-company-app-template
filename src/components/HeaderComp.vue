@@ -11,7 +11,7 @@ const { onCheckDrawer } = globalStore
 </script>
 
 <template>
-  <aside
+  <header
     class="fixed z-10 flex h-full w-1/6 justify-center bg-gray-200 p-20"
     :style="{
       transform: `translateX(${-scrollPercent}%)`,
@@ -21,10 +21,10 @@ const { onCheckDrawer } = globalStore
     <button class="cursor-pointer self-start" @click="$router.push('/')">
       <h1 class="font-dancing text-6xl">Coffee</h1>
     </button>
-  </aside>
+  </header>
 
-  <aside
-    class="fixed top-0 left-0 flex h-20 items-center justify-between bg-gray-200 px-[5%] shadow transition-transform ease-in-out"
+  <header
+    class="fixed top-0 left-0 flex h-1/12 items-center justify-between bg-gray-200 px-[5%] shadow transition-transform ease-in-out"
     :class="{
       'w-5/6': isDrawerOpen && scrollPercent >= 90,
       'w-full': !isDrawerOpen || scrollPercent < 90,
@@ -52,5 +52,5 @@ const { onCheckDrawer } = globalStore
         draggable="false"
       />
     </button>
-  </aside>
+  </header>
 </template>
