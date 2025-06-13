@@ -4,7 +4,7 @@ const globalStore = useGlobalStore()
 const scrollStore = useScrollStore()
 
 import { storeToRefs } from 'pinia'
-const { isDrawerOpen } = storeToRefs(globalStore)
+const { isDrawerOpen, isFooterVisible } = storeToRefs(globalStore)
 const { scrollPercent } = storeToRefs(scrollStore)
 
 const { onCheckDrawer } = globalStore
@@ -24,8 +24,10 @@ const { onCheckDrawer } = globalStore
   </header>
 
   <header
-    class="fixed top-0 left-0 flex h-1/12 items-center justify-between bg-gray-200 px-[5%] shadow transition-transform ease-in-out"
+    class="fixed top-0 flex h-1/12 items-center justify-between bg-gray-200 px-[5%] shadow transition-transform ease-in-out"
     :class="{
+      'left-0': !isFooterVisible,
+      'right-0': isFooterVisible,
       'w-5/6': isDrawerOpen && scrollPercent >= 90,
       'w-full': !isDrawerOpen || scrollPercent < 90,
     }"
