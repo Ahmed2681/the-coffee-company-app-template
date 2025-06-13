@@ -12,19 +12,35 @@ const { onCheckDrawer } = globalStore
 
 <template>
   <header
-    class="fixed z-10 flex h-full w-1/6 justify-center bg-gray-200 p-20"
+    class="fixed z-10 flex h-full w-1/6 items-center justify-center bg-gray-200 p-20"
     :style="{
-      transform: `translateX(${-scrollPercent}%)`,
+      transform: `rotate(${-scrollPercent * 0.5}deg) translateX(${-scrollPercent * 5}%) translateY(${scrollPercent}%)`,
       opacity: `${scrollPercent > 85 ? 0 : 100}%`,
     }"
   >
+    <img
+      class="absolute top-2 -right-0 w-6"
+      src="@/assets/images/spiral-holes.png"
+      alt="spiral-holes"
+    />
+    <img
+      class="absolute -right-0 mb-3 w-6"
+      src="@/assets/images/spiral-holes.png"
+      alt="spiral-holes"
+    />
+    <img
+      class="absolute -right-0 bottom-5 w-6"
+      src="@/assets/images/spiral-holes.png"
+      alt="spiral-holes"
+    />
+
     <button class="cursor-pointer self-start" @click="$router.push('/')">
       <h1 class="font-dancing text-6xl">Coffee</h1>
     </button>
   </header>
 
   <header
-    class="fixed top-0 flex h-1/12 items-center justify-between bg-gray-200 px-[5%] shadow transition-transform ease-in-out"
+    class="fixed top-0 z-50 flex h-1/12 items-center justify-between bg-gray-200 px-[5%] shadow transition-transform ease-in-out"
     :class="{
       'left-0': !isFooterVisible,
       'right-0': isFooterVisible,
