@@ -27,7 +27,7 @@ const { scrollPercent } = storeToRefs(scrollStore)
   >
     <!-- Profil bilgileri / Oturum Aç (App'e yönlendirilecek) / Ayarlar vb.-->
     <button class="cursor-pointer self-start" @click="$router.push('/')">
-      <h1 class="font-dancing text-6xl">DrawerCoffee</h1>
+      <h1 class="font-dancing text-6xl">Drawer</h1>
     </button>
   </aside>
 </template>

@@ -15,7 +15,7 @@ const { isFooterVisible } = storeToRefs(globalStore)
     }"
   >
     <button class="cursor-pointer self-start" @click="$router.push('/')">
-      <h1 class="font-dancing text-6xl">FooterCoffee</h1>
+      <h1 class="font-dancing text-6xl">Footer</h1>
     </button>
   </footer>
 </template>
