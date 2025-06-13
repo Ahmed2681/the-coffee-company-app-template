@@ -13,11 +13,10 @@ const { scrollPercent } = storeToRefs(scrollStore)
     class="fixed -right-70 flex h-full w-1/6 justify-center bg-gray-200 p-20"
     :style="{
       transform: scrollPercent > 90 && isDrawerOpen ? 'translateX(-280px)' : 'translateX(0%)',
-      opacity: `${scrollPercent > 90 && isDrawerOpen ? 100 : 0}%`,
+      opacity: `${scrollPercent > 90 && isDrawerOpen ? 80 : 0}%`,
     }"
   >
-
-  <!-- Profil bilgileri / Oturum Aç (App'e yönlendirilecek) / Ayarlar vb.-->
+    <!-- Profil bilgileri / Oturum Aç (App'e yönlendirilecek) / Ayarlar vb.-->
     <button class="cursor-pointer self-start" @click="$router.push('/')">
       <h1 class="font-dancing text-6xl">DrawerCoffee</h1>
     </button>
