@@ -1,5 +1,7 @@
-<script setup></script>
+<script setup>
+import FirstPage from '@/components/FirstPage.vue'
+</script>
 
 <template>
-  <div></div>
+  <FirstPage> ABOUTPAGE </FirstPage>
 </template>
