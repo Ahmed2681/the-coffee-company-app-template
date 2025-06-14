@@ -20,29 +20,30 @@ const { onCheckDrawer } = globalStore
   >
     <img
       v-if="scrollPercent > 0"
-      class="absolute top-1 right-0 w-[25px] z-20"
+      class="absolute top-1 right-0 z-20 w-[25px]"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
       draggable="false"
     />
     <img
       v-if="scrollPercent > 0"
-      class="absolute right-0 mb-3 w-[25px] z-20"
+      class="absolute right-0 z-20 mb-3 w-[25px]"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
       draggable="false"
     />
     <img
       v-if="scrollPercent > 0"
-      class="absolute right-0 bottom-4 w-[25px] z-20"
+      class="absolute right-0 bottom-4 z-20 w-[25px]"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
       draggable="false"
     />
 
-    <button class="cursor-pointer self-start" @click="$router.push('/')">
+    <a href="/" class="self-start">
+      <!-- a tag is used because we need to refresh the page after redirection for the header and footer component -->
       <h1 class="font-dancing text-6xl">Coffee</h1>
-    </button>
+    </a>
   </header>
 
   <header
@@ -58,13 +59,17 @@ const { onCheckDrawer } = globalStore
       opacity: `${scrollPercent}%`,
     }"
   >
-    <button class="cursor-pointer" @click="$router.push('/')">
+    <a href="/">
+      <!-- a tag is used because we need to refresh the page after redirection for the header and footer component -->
       <h1 class="font-dancing text-4xl">Coffee</h1>
-    </button>
+    </a>
 
     <ul class="flex items-center gap-10">
       <li>Home</li>
-      <li><button class="cursor-pointer" @click="$router.push('/about')">About Us</button></li>
+
+      <li><a href="/about">About Us</a></li>
+      <!-- a tag is used because we need to refresh the page after redirection for the header and footer component -->
+
       <li>Contact</li>
     </ul>
 
