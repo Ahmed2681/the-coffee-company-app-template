@@ -20,21 +20,21 @@ const { onCheckDrawer } = globalStore
   >
     <img
       v-if="scrollPercent > 0"
-      class="absolute top-2 right-0 w-6"
+      class="absolute top-1 right-0 w-[25px] z-20"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
       draggable="false"
     />
     <img
       v-if="scrollPercent > 0"
-      class="absolute right-0 mb-3 w-6"
+      class="absolute right-0 mb-3 w-[25px] z-20"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
       draggable="false"
     />
     <img
       v-if="scrollPercent > 0"
-      class="absolute right-0 bottom-5 w-6"
+      class="absolute right-0 bottom-4 w-[25px] z-20"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
       draggable="false"

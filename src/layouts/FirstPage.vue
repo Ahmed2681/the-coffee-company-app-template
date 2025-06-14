@@ -18,7 +18,7 @@ const { scrollPercent } = storeToRefs(scrollStore)
     />
     <img
       v-if="scrollPercent === 0"
-      class="absolute top-2 -left-6 z-10 w-6"
+      class="absolute top-1 -left-6 z-20 w-[25px]"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
       draggable="false"
@@ -32,7 +32,7 @@ const { scrollPercent } = storeToRefs(scrollStore)
     />
     <img
       v-if="scrollPercent === 0"
-      class="absolute -left-6 z-10 mb-4 w-6"
+      class="absolute -left-6 z-20 mb-3 w-[25px]"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
       draggable="false"
@@ -46,7 +46,7 @@ const { scrollPercent } = storeToRefs(scrollStore)
     />
     <img
       v-if="scrollPercent === 0"
-      class="absolute bottom-5 -left-6 z-10 w-6"
+      class="absolute bottom-4 -left-6 z-20 w-[25px]"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
       draggable="false"

@@ -1,10 +1,7 @@
 <script setup>
-import FirstPage from '@/layouts/FirstPage.vue'
-import LastPage from '@/layouts/LastPage.vue'
+import SinglePage from '@/layouts/SinglePage.vue'
 </script>
 
 <template>
-  <FirstPage> ABOUTPAGE </FirstPage>
-
-  <LastPage> HOMEPAGE </LastPage>
+  <SinglePage>ABOUT</SinglePage>
 </template>

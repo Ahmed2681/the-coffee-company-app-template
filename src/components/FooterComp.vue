@@ -25,21 +25,21 @@ const { scrollPercent } = storeToRefs(scrollStore)
   >
     <img
       v-if="scrollPercent < 100"
-      class="absolute top-2 left-0 w-6"
+      class="absolute top-1 left-0 z-20 w-[25px]"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
       draggable="false"
     />
     <img
       v-if="scrollPercent < 100"
-      class="absolute left-0 mb-3 w-6"
+      class="absolute left-0 z-20 mb-3 w-[25px]"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
       draggable="false"
     />
     <img
       v-if="scrollPercent < 100"
-      class="absolute bottom-5 left-0 w-6"
+      class="absolute bottom-4 left-0 z-20 w-[25px]"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
       draggable="false"
