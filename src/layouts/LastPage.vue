@@ -7,43 +7,49 @@ const { scrollPercent } = storeToRefs(scrollStore)
 </script>
 
 <template>
-  <section class="relative flex h-screen w-5/6 items-center bg-[#967259] pl-10">
+  <section class="relative flex h-screen w-5/6 items-center bg-[#967259] px-10">
     <!--#region spirals -->
     <!-- first sprial -->
     <img
-      class="absolute top-0 -left-5 z-10 w-8"
+      class="absolute top-15 -right-5 z-10 w-8 rotate-180"
       src="@/assets/images/notebook-spiral.png"
       alt="notebook-spiral"
+      draggable="false"
     />
     <img
-      v-if="scrollPercent === 0"
-      class="absolute top-2 -left-6 w-6"
+      v-if="scrollPercent === 100"
+      class="absolute top-20 -right-6 z-10 w-6 rotate-180"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
+      draggable="false"
     />
     <!-- second sprial -->
     <img
-      class="absolute -left-5 z-10 w-8"
+      class="absolute -right-5 z-10 mt-12 w-8 rotate-180"
       src="@/assets/images/notebook-spiral.png"
       alt="notebook-spiral"
+      draggable="false"
     />
     <img
-      v-if="scrollPercent === 0"
-      class="absolute -left-6 mb-4 w-6"
+      v-if="scrollPercent === 100"
+      class="absolute -right-6 z-10 mt-15 w-6 rotate-180"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
+      draggable="false"
     />
     <!-- third sprial -->
     <img
-      class="absolute bottom-0 -left-5 z-10 w-8"
+      class="absolute -right-5 bottom-3 z-10 w-8 rotate-180"
       src="@/assets/images/notebook-spiral.png"
       alt="notebook-spiral"
+      draggable="false"
     />
     <img
-      v-if="scrollPercent === 0"
-      class="absolute bottom-5 -left-6 w-6"
+      v-if="scrollPercent === 100"
+      class="absolute -right-6 bottom-5 z-10 w-6 rotate-180"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
+      draggable="false"
     />
     <!--#endregion -->
     <slot></slot>

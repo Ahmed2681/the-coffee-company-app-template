@@ -19,19 +19,25 @@ const { onCheckDrawer } = globalStore
     }"
   >
     <img
-      class="absolute top-2 -right-0 w-6"
+      v-if="scrollPercent > 0"
+      class="absolute top-2 right-0 w-6"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
+      draggable="false"
     />
     <img
-      class="absolute -right-0 mb-3 w-6"
+      v-if="scrollPercent > 0"
+      class="absolute right-0 mb-3 w-6"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
+      draggable="false"
     />
     <img
-      class="absolute -right-0 bottom-5 w-6"
+      v-if="scrollPercent > 0"
+      class="absolute right-0 bottom-5 w-6"
       src="@/assets/images/spiral-holes.png"
       alt="spiral-holes"
+      draggable="false"
     />
 
     <button class="cursor-pointer self-start" @click="$router.push('/')">
@@ -40,7 +46,7 @@ const { onCheckDrawer } = globalStore
   </header>
 
   <header
-    class="fixed top-0 z-50 flex h-1/12 items-center justify-between bg-gray-200 px-[5%] shadow transition-transform ease-in-out"
+    class="fixed top-0 z-40 flex h-1/12 items-center justify-between bg-gray-200 px-[5%] shadow transition-transform ease-in-out"
     :class="{
       'left-0': !isFooterVisible,
       'right-0': isFooterVisible,

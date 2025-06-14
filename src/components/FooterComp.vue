@@ -10,19 +10,40 @@ const { scrollPercent } = storeToRefs(scrollStore)
 
 <template>
   <footer
-    class="fixed right-0 bottom-0 items-center z-10 flex w-1/6 transform justify-center bg-gray-200 p-20 transition-transform ease-in-out"
+    class="fixed right-0 bottom-0 flex w-1/6 transform items-center justify-center bg-gray-200 p-20 transition-all ease-in-out"
     :class="{
       'h-full': scrollPercent === 0,
       'h-11/12': scrollPercent !== 0,
-      'translate-x-0': isFooterVisible,
-      'translate-x-[100%]': !isFooterVisible,
+      visible: isFooterVisible,
+      invisible: !isFooterVisible,
+    }"
+    :style="{
+      transform: isFooterVisible
+        ? `rotate(0deg) translateX(0%) translateY(0%)`
+        : `rotate(${scrollPercent * 1}deg) translateX(${scrollPercent * 5}%) translateY(${scrollPercent}%)`,
     }"
   >
-    <!-- <img
-      class="absolute -left-6 w-[15%] rotate-0"
-      src="@/assets/images/notebook-spiral.png"
-      alt="notebook-spiral"
-    /> -->
+    <img
+      v-if="scrollPercent < 100"
+      class="absolute top-2 left-0 w-6"
+      src="@/assets/images/spiral-holes.png"
+      alt="spiral-holes"
+      draggable="false"
+    />
+    <img
+      v-if="scrollPercent < 100"
+      class="absolute left-0 mb-3 w-6"
+      src="@/assets/images/spiral-holes.png"
+      alt="spiral-holes"
+      draggable="false"
+    />
+    <img
+      v-if="scrollPercent < 100"
+      class="absolute bottom-5 left-0 w-6"
+      src="@/assets/images/spiral-holes.png"
+      alt="spiral-holes"
+      draggable="false"
+    />
     <button class="cursor-pointer self-start" @click="$router.push('/')">
       <h1 class="font-dancing text-6xl">Footer</h1>
     </button>

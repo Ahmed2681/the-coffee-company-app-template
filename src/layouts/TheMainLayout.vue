@@ -31,7 +31,7 @@ onMounted(() => {
 <template>
   <HeaderComp />
   <DrawerMenu />
-  <div ref="slotContainer" class="flex min-h-screen flex-col items-end bg-[#000]">
+  <div ref="slotContainer" class="flex min-h-screen flex-col bg-[#000]">
     <slot></slot>
   </div>
   <FooterComp />
