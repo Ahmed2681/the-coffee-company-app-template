@@ -14,6 +14,9 @@ export default function useScrollListener() {
     scrollStore.setScrollPercent(parseInt(raw * 100))
 
     globalStore.isFooterVisible = windowHeight + scrollTop >= fullHeight
+
+    console.log(scrollStore.scrollPercent);
+
   }
 
   onMounted(() => {

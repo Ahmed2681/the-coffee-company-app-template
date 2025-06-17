@@ -34,5 +34,5 @@ onMounted(() => {
   <div ref="slotContainer" class="flex min-h-screen flex-col bg-[#000]">
     <slot></slot>
   </div>
-  <FooterComp />
+  <!-- <FooterComp /> -->
 </template>
