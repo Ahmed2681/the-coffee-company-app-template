@@ -10,7 +10,7 @@ const { scrollPercent } = storeToRefs(scrollStore)
 
 <template>
   <aside
-    class="fixed z-40 flex h-full w-1/6 justify-center bg-gray-200 p-20"
+    class="fixed z-40 flex h-full w-1/6 outline-4  outline-[#453223] justify-center bg-gray-200 p-20"
     :class="{
       '-right-70': !isFooterVisible,
       '-left-70': isFooterVisible,
