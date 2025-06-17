@@ -12,7 +12,7 @@ const { onCheckDrawer } = globalStore
 
 <template>
   <header
-    class="fixed z-10 flex h-full w-1/6 items-center justify-center bg-gray-200 outline-4  outline-[#453223] p-20 *:absolute"
+    class="fixed z-10 flex h-full w-1/6 items-center justify-center bg-gray-200 p-20 outline-4 outline-[#453223] *:absolute"
     :style="{
       transform: `rotate(${-scrollPercent * 0.5}deg) translateX(${-scrollPercent * 5}%) translateY(${scrollPercent}%)`,
       opacity: `${scrollPercent > 85 ? 0 : 100}%`,
@@ -23,7 +23,7 @@ const { onCheckDrawer } = globalStore
       <h1 class="font-dancing text-6xl">Coffee</h1>
     </a>
 
-    <button class="size-10 self-end cursor-pointer" @click="onCheckDrawer">
+    <button class="size-10 cursor-pointer self-end" @click="onCheckDrawer">
       <img
         :class="{ 'rotate-40': !isDrawerOpen, 'rotate-0': isDrawerOpen }"
         src="@/assets/images/coffee-bean.png"
@@ -56,7 +56,7 @@ const { onCheckDrawer } = globalStore
   </header>
 
   <header
-    class="fixed top-0 z-40 flex h-1/12 items-center justify-between bg-gray-200 px-[5%] shadow transition-transform ease-in-out"
+    class="fixed top-0 z-40 flex h-1/12 items-center justify-between bg-gray-200 px-[5%] shadow outline-4 outline-[#453223] transition-transform ease-in-out"
     :class="{
       'left-0': !isFooterVisible,
       'right-0': isFooterVisible,

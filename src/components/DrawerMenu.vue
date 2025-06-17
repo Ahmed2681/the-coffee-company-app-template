@@ -31,7 +31,7 @@ const { scrollPercent } = storeToRefs(scrollStore)
   </aside>
 
   <aside
-    class="absolute left-1/6 z-10 flex h-full w-1/6 items-center justify-center border-l-4 border-[#453223] bg-gray-200 p-20"
+    class="absolute left-1/6 z-10 flex h-full w-1/6 items-center justify-center bg-gray-200 p-20 outline-4 outline-[#453223]"
     :style="{
       transformOrigin: 'left center',
       transform: !isDrawerOpen

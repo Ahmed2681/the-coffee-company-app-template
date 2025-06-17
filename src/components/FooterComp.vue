@@ -10,7 +10,7 @@ const { scrollPercent } = storeToRefs(scrollStore)
 
 <template>
   <footer
-    class="fixed right-0 bottom-0 flex w-1/6 transform items-center justify-center bg-gray-200 p-20 transition-all ease-in-out"
+    class="fixed right-0 bottom-0 flex w-1/6 transform items-center justify-center bg-gray-200 p-20 outline-4 outline-[#453223] transition-all ease-in-out"
     :class="{
       'h-full': scrollPercent === 0,
       'h-11/12': scrollPercent !== 0,
