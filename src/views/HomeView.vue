@@ -1,6 +1,6 @@
 <script setup>
-import FirstPage from '@/layouts/FirstPage.vue'
-import LastPage from '@/layouts/LastPage.vue'
+import FirstPage from '@/components/layout/FirstPage.vue'
+import LastPage from '@/components/layout/LastPage.vue'
 </script>
 
 <template>
