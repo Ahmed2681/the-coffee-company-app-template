@@ -28,26 +28,33 @@ const { onCheckDrawer } = globalStore
       />
     </button>
 
+    <!--#region spirals -->
+    <!-- first sprial -->
     <img
-      v-if="scrollPercent > 0"
-      class="absolute top-1 right-0 z-20 w-[25px]"
-      src="@/assets/images/spiral-holes.png"
-      alt="spiral-holes"
+      v-if="!isDrawerOpen"
+      class="absolute top-0 -right-3 z-10 w-8"
+      src="@/assets/images/notebook-spiral.png"
+      alt="notebook-spiral"
       draggable="false"
     />
+
+    <!-- second sprial -->
     <img
-      v-if="scrollPercent > 0"
-      class="absolute right-0 z-20 mb-3 w-[25px]"
-      src="@/assets/images/spiral-holes.png"
-      alt="spiral-holes"
+      v-if="!isDrawerOpen"
+      class="absolute -right-3 z-10 w-8"
+      src="@/assets/images/notebook-spiral.png"
+      alt="notebook-spiral"
       draggable="false"
     />
+
+    <!-- third sprial -->
     <img
-      v-if="scrollPercent > 0"
-      class="absolute right-0 bottom-4 z-20 w-[25px]"
-      src="@/assets/images/spiral-holes.png"
-      alt="spiral-holes"
+      v-if="!isDrawerOpen"
+      class="absolute -right-3 bottom-0 z-10 w-8"
+      src="@/assets/images/notebook-spiral.png"
+      alt="notebook-spiral"
       draggable="false"
     />
+    <!--#endregion -->
   </header>
 </template>

@@ -10,7 +10,7 @@ const { scrollPercent } = storeToRefs(scrollStore)
 
 <template>
   <aside
-    class="fixed z-40 flex h-full w-1/6 outline-4  outline-[#453223] justify-center bg-gray-200 p-20"
+    class="fixed z-40 flex h-full w-1/6 justify-center bg-gray-200 p-20 outline-4 outline-[#453223]"
     :class="{
       '-right-70': !isFooterVisible,
       '-left-70': isFooterVisible,
@@ -44,5 +44,31 @@ const { scrollPercent } = storeToRefs(scrollStore)
     <button class="cursor-pointer self-start" @click="$router.push('/')">
       <h1 class="font-dancing text-6xl">Drawer</h1>
     </button>
+
+    <!--#region spirals -->
+    <!-- first sprial -->
+    <img
+      class="absolute top-0 -left-3 w-8 -rotate-180"
+      src="@/assets/images/notebook-spiral.png"
+      alt="notebook-spiral"
+      draggable="false"
+    />
+
+    <!-- second sprial -->
+    <img
+      class="absolute -left-3 w-8 -rotate-180"
+      src="@/assets/images/notebook-spiral.png"
+      alt="notebook-spiral"
+      draggable="false"
+    />
+
+    <!-- third sprial -->
+    <img
+      class="absolute bottom-0 -left-3 w-8 -rotate-180"
+      src="@/assets/images/notebook-spiral.png"
+      alt="notebook-spiral"
+      draggable="false"
+    />
+    <!--#endregion -->
   </aside>
 </template>
